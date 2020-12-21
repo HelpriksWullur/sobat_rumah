@@ -23,10 +23,11 @@ class Autentification extends CI_Controller
 
   public function login()
   {
-    $this->form_validation->set_rules('email', 'Alamat email', 'required', [
-      'required' => 'Email harus diisi!'
+    $this->form_validation->set_rules('email', 'Alamat email', 'trim|required|valid_email', [
+      'required' => 'Email harus diisi!',
+      'valid_email' => 'Email tidak valid!'
     ]);
-    $this->form_validation->set_rules('pass', 'Password', 'required',[
+    $this->form_validation->set_rules('pass', 'Password', 'trim|required',[
       'required' => 'Password harus diisi!'
     ]);
     if ($this->form_validation->run() == false) {
@@ -43,12 +44,12 @@ class Autentification extends CI_Controller
   {
     $email = htmlspecialchars($this->input->post('email', true));
     $password = $this->input->post('pass', true);
-    $user = $this->ModelUser->cekData(['username' => $email])->row_array();
+    $user = $this->ModelUser->cekData(['email' => $email])->row_array();
     if ($user) {
       if ($password == $user['password']) {
         $data = [
           'judul' => 'Dashboard',
-          'user' => $user['username']
+          'user' => $user['email']
         ];
         $this->session->set_userdata($data);
         redirect('Account');
@@ -57,7 +58,7 @@ class Autentification extends CI_Controller
         redirect('Autentification');
       }
     } else {
-      $this->session->set_flashdata('pesan', '<div class="alert alert-danger alert-message" role="alert">Alamat Email tidak valid!!</div>');
+      $this->session->set_flashdata('pesan', '<div class="alert alert-danger alert-message" role="alert">Alamat Email tidak terdaftar!!</div>');
       redirect('Autentification');
     }
   }
@@ -70,15 +71,37 @@ class Autentification extends CI_Controller
     ];
     $this->session->unset_userdata($data);
     $this->session->sess_destroy();
-
-    $data=[
-      'judul' => 'Login',
-    ];
-    $this->load->view('login/index', $data);
+    redirect('Autentification');
   }
 
   public function registration()
   {
+    $this->form_validation->set_rules('emailBaru', 'Alamat Email', 'trim|required|valid_email|is_unique[user.email]', [
+      'required' => 'Alamat Email harus diisi!',
+      'valid_email' => 'Email tidak valid!',
+      'is_unique' => 'Alamat Email tidak tersedia!'
+    ]);
+    $this->form_validation->set_rules('passBaru', 'Password', 'trim|required', [
+      'required' => 'Password harus diisi!'
+    ]);
+    $this->form_validation->set_rules('passconf', 'Password Validasi', 'trim|required|matches[passBaru]', [
+      'required' => 'Password validasi harus diisi!',
+      'matches' => 'Password validasi tidak cocok!',
+    ]);
 
+    if ($this->form_validation->run() == false) {
+      $data=[
+        'judul' => 'Login',
+      ];
+      $this->load->view('login/index', $data);
+    } else {
+      $data=[
+        'email' => $this->input->post('emailBaru'),
+        'password' => $this->input->post('passBaru')
+      ];
+      $this->ModelUser->tambahUser($data);
+      $this->session->set_flashdata('pesanBaru', '<div class="alert alert-success alert-message" role="alert">Pendaftaran Anda berhasil!</div>');
+      redirect('Autentification');
+    }
   }
 }
