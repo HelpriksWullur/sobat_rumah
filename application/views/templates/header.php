@@ -36,38 +36,51 @@ defined('BASEPATH') or exit('No script access allowed');
 
         <!-- Topbar Navbar -->
         <ul class="d-flex align-items-center navbar-nav ml-auto">
+
           <!-- Dropdown - Kategori -->
           <li class="nav-item dropdown">
-            <a class="h5 text-secondary font-weight-bold dropdown-toggle " type="button" id="kategori_dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Kategori</a>
+            <a class="h5 text-secondary font-weight-bold dropdown-toggle" type="button" id="kategori_dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Kategori</a>
 
-            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="kategori_dropdown" style="margin-top: 1.5em">
-              <p class="dropdown-item">
+            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="kategori_dropdown" style="margin-top: 1rem">
+              <a class="dropdown-item" href="<?= base_url('Tes'); ?>">
                 Furniture Rumah
-              </p>
+              </a>
               <div class="dropdown-divider"></div>
-              <p class="dropdown-item">
+              <a class="dropdown-item" href="<?= base_url('Tes'); ?>">
                 Furniture Kantor
-              </p>
-              <div class="dropdown-divider"></div>
-              <p class="dropdown-item">
-                Furniture Anak
-              </p>
+              </a>
             </div>
           </li>
           <!-- Akhir Dropdown - Kategori -->
+
           <div class="topbar-divider"></div>
           <li class="nav-item no-arrow ml-2">
-            <a class="text-secondary" href="<?= base_url('Account/cart'); ?>" title="Keranjang">
-              <i class="fas fa-shopping-cart fa-lg" style="color: rgb(207, 100, 0)"></i>
+            <a class="text-secondary" href="<?= base_url('Account/transaksi'); ?>" title="Transaksi">
+              <i class="fas fa-scroll fa-lg mr-2" style="color: rgb(205, 102, 5)"></i>
             </a>
           </li>
           <li class="nav-item no-arrow ml-3">
-            <form class="search-form searchbar" action="index.html" method="post" role="search" id="hiddenSearchBox">
-              <div class="input-group">
-                <input class="form-control form-control-md" placeholder="Cari produk.." type="search" name="" value="">
-              </div>
-            </form>
+
+            <!-- input cari produk -->
+            <input id="myInput" class="form-control form-control-md" placeholder="Cari produk.." type="search" name="" value="">
+            <!-- akhir input cari produk -->
+
+            <!-- filter list -->
+              <ul class="list-group position-absolute" id="myList">
+                <?php
+
+                foreach ($katalog as $k) { ?>
+                    <li class="list-group-item">
+                      <a class="text-dark" href="" type="button" data-toggle="modal" data-target="#produk<?= $k['id_produk']; ?>">
+                        <img src="<?= base_url('assets/img/produk/'); ?><?= $k['gambar']; ?>" alt="" style="width:3rem; height:3rem">
+                        <span><?= $k['nama_produk']; ?></span>
+                      </a>
+                    </li>
+                <?php } ?>
+              </ul>
+            <!-- akhir filter list -->
           </li>
+
           <div class="topbar-divider d-none d-sm-block"></div>
 
           <!-- Nav Item - User Information -->
@@ -93,3 +106,18 @@ defined('BASEPATH') or exit('No script access allowed');
       </nav>
     </div>
   <!-- End of Header -->
+<script>
+$(document).ready(function(){
+$("#myList").hide();
+$("#myInput").on("keyup", function() {
+  $("#myList").show();
+  var value = $(this).val().toLowerCase();
+  $("#myList li").filter(function() {
+    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+  });
+  if (value == '') {
+    $("#myList").hide();
+  }
+});
+});
+</script>
