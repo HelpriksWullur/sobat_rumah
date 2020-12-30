@@ -14,11 +14,11 @@ defined('BASEPATH') or exit('No script access allowed');
   </head>
   <body style="background-color: rgb(164, 160, 160)">
     <div class="container-fluid">
-      <div class="container frm-login-signup row">
-        <div id="img-logup" class="w-25 rounded-left" style="height: 23.4rem">
+      <div id="tesid" class="container-fluid frm-login-signup row">
+        <div id="img-logup" class="w-50 rounded-left">
           <img class="w-100 h-100 rounded-left" src="<?= base_url('assets/img/background-login.jpg'); ?>" alt="">
         </div>
-        <div id="frm-logup" class="w-25 bg-dark rounded-right">
+        <div id="frm-logup" class="w-50 bg-dark rounded-right">
           <div class="w-100 h-100 text-white">
             <div class="d-flex justify-content-around align-items-center row">
               <input class="d-none btn-check" id="opt-login" type="radio" name="login-signup" value="" autocomplete="off" checked>
