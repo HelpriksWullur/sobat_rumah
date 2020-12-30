@@ -1,0 +1,127 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%
+}
+
+.border-3 {
+  border-width: 3px !important;
+}
+
+.active:hover {
+  cursor: default !important;
+}
+
+#header a, #mySlideShow a {
+  text-decoration: none;
+}
+
+.topbar-divider{
+  width:0;
+  border-right:1px solid #e3e6f0;
+  height:calc(4.375rem - 2rem);
+  margin:auto 1rem;
+}
+
+.btn-primary {
+  border-color: rgb(130, 64, 3) !important;
+  background-color: rgb(130, 64, 3) !important;
+}
+
+.btn-primary:hover {
+  background-color: rgb(241, 116, 0) !important;
+}
+
+.btn-primary:focus {
+  box-shadow:0 0 0 .2rem rgba(241, 116, 0, 0.5) !important;
+}
+
+
+/* Style untuk halaman Login */
+
+.log_up_btn:hover {
+  cursor: pointer;
+}
+
+#btn_login {
+  background-color: rgb(130, 64, 3) !important;
+}
+
+#btn_login:hover {
+  background-color: rgb(241, 116, 0) !important;
+}
+
+.hide {
+  display: none;
+}
+
+@media only screen and (min-width: 320px) {
+  #img-logup {
+      display: none;
+  }
+
+  #frm-logup {
+    width: 100% !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(0, 0) !important;
+    position: static;
+  }
+
+  #tesid {
+      width: 100% !important;
+      top: 50% !important;
+      left: 50% !important;
+      transform: translate(-46%, -50%) !important;
+      position: absolute;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  #img-logup {
+      display: none;
+  }
+
+  #frm-logup {
+    width: 100% !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(50%, 0) !important;
+    position: static;
+  }
+
+  #tesid {
+      width: 70% !important;
+      top: 50% !important;
+      left: 50% !important;
+      transform: translate(-96.5%, -50%) !important;
+      position: absolute;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  #img-logup {
+    width: 50% !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(0, 0) !important;
+    position: static;
+    display: block;
+  }
+
+  #frm-logup {
+    width: 50% !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(0, 0) !important;
+    position: static;
+  }
+
+  #tesid {
+    width: 50% !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    position: absolute;
+  }
+}
