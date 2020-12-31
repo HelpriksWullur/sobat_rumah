@@ -8,15 +8,19 @@ defined('BASEPATH') or exit('No script access allowed');
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sobat Rumah - <?php echo $judul; ?></title>
     <link rel="stylesheet" href="<?= base_url('assets/css/style.css'); ?>">
-    <link rel="stylesheet" href="<?= base_url('assets/bootstrap/css/bootstrap.min.css'); ?>">
-    <script src="<?= base_url('assets/js/jquery-3.5.1.min.js'); ?>"></script>
-    <script src="<?= base_url('assets/js/jquery.cookie.js'); ?>"></script>
+    <!-- <link rel="stylesheet" href="<?= base_url('assets/bootstrap/css/bootstrap.min.css'); ?>"> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- <script src="<?= base_url('assets/js/jquery-3.5.1.min.js'); ?>"></script> -->
+    <!-- <script src="<?= base_url('assets/js/jquery.cookie.js'); ?>"></script> -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"></script>
+
   </head>
   <body style="background-color: rgb(164, 160, 160)">
     <div class="container-fluid">
       <div id="tesid" class="container-fluid frm-login-signup row">
         <div id="img-logup" class="w-50 rounded-left">
-          <img class="w-100 h-100 rounded-left" src="<?= base_url('assets/img/background-login.jpg'); ?>" alt="">
+          <img class="w-100 h-100 rounded-left" src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80" alt="">
         </div>
         <div id="frm-logup" class="w-50 bg-dark rounded-right">
           <div class="w-100 h-100 text-white">
