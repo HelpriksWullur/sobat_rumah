@@ -7,11 +7,10 @@ defined('BASEPATH') or exit('No script access allowed');
     <meta charset="utf-8">
     <title>Sobat Rumah - <?php echo $judul; ?></title>
     <link type="text/css" rel="stylesheet" href="<?= base_url('assets/css/style.css'); ?>">
-    <link rel="stylesheet" href="<?= base_url('assets/'); ?>fontawesome-free/css/all.min.css" rel="stylesheet">
-    <link href="<?= base_url('assets/bootstrap/css/bootstrap.min.css'); ?>" rel="stylesheet">
-    <script type="text/javascript" src="<?= base_url('assets/js/jquery-3.5.1.min.js'); ?>"></script>
-    <script type="text/javascript" src="<?= base_url('assets/bootstrap/js/bootstrap.min.js'); ?>"></script>
-    <script type="text/javascript" src="<?= base_url('assets/bootstrap/js/bootstrap.bundle.js'); ?>"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   </head>
   <body>
     <!-- Content Wrapper -->
