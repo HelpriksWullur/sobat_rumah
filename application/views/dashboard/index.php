@@ -19,7 +19,7 @@
       <div class="mb-3" style="margin-right: 3rem">
         <form class="" action="<?= base_url('Account/detail'); ?>" method="post">
         <div class="row border rounded" style="width: 15rem; height: 20rem">
-          <img class="w-100 h-50 rounded" src="<?= base_url('assets/img/produk/'); ?><?= $k['gambar']; ?>" alt="<?= $k['gambar']; ?>">
+          <img class="w-100 h-50 rounded" src="<?= $k['gambar']; ?>" alt="<?= $k['nama_produk']; ?>">
           <div class="w-100 h-100 p-1 pr-2 pl-2">
             <h6 class="text-dark font-weight-bold"><?= $k['nama_produk']; ?></h6>
             <h4 class="text-dark font-weight-bold"><?= money_format("%i",$k['harga_produk']); ?></h4>
@@ -48,7 +48,7 @@
           <div class="modal-body d-flex flex-column justify-content-center align-items-center">
             <form class="" action="<?= base_url('Account/beli'); ?>" method="post">
             <div class="mb-3" style="width: 15rem; height: 15rem">
-              <img class="w-100 h-100" src="<?= base_url('assets/img/produk/'); ?><?= $k['gambar']; ?>" alt="">
+              <img class="w-100 h-100" src="<?= $k['gambar']; ?>" alt="<?= $k['nama_produk']; ?>">
             </div>
             <div class="bg-success p-1 rounded mb-2">
               <?= $k['deskripsi_produk']; ?>
