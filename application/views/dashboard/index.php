@@ -4,7 +4,7 @@
 <div class="">
   <div class="card">
     <div class="card-body-img" style="height: 30em">
-      <img src="<?= base_url('assets/img/background-dashboard.jpg'); ?>" alt="" style="height: 30em; width: 100%">
+      <img src="https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NXx8ZnVybml0dXJlJTIwc29mYXxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="" style="height: 30em; width: 100%">
     </div>
   </div>
 <!-- akhir background -->
