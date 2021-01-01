@@ -7,11 +7,7 @@ defined('BASEPATH') or exit('No script access allowed');
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sobat Rumah - <?php echo $judul; ?></title>
-    <link rel="stylesheet" href="<?= base_url('assets/css/style.css'); ?>">
-    <!-- <link rel="stylesheet" href="<?= base_url('assets/bootstrap/css/bootstrap.min.css'); ?>"> -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <!-- <script src="<?= base_url('assets/js/jquery-3.5.1.min.js'); ?>"></script> -->
-    <!-- <script src="<?= base_url('assets/js/jquery.cookie.js'); ?>"></script> -->
     <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"></script>
 
@@ -89,5 +85,114 @@ defined('BASEPATH') or exit('No script access allowed');
       });
     });
     </script>
+    <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
+
+    .btn-primary {
+      border-color: rgb(130, 64, 3) !important;
+      background-color: rgb(130, 64, 3) !important;
+    }
+
+    .btn-primary:hover {
+      background-color: rgb(241, 116, 0) !important;
+    }
+
+    .btn-primary:focus {
+      box-shadow:0 0 0 .2rem rgba(241, 116, 0, 0.5) !important;
+    }
+
+    /* Style untuk halaman Login */
+
+    .log_up_btn:hover {
+      cursor: pointer;
+    }
+
+    #btn_login {
+      background-color: rgb(130, 64, 3) !important;
+    }
+
+    #btn_login:hover {
+      background-color: rgb(241, 116, 0) !important;
+    }
+
+    .hide {
+      display: none;
+    }
+
+    @media only screen and (min-width: 320px) {
+      #img-logup {
+          display: none;
+      }
+
+      #frm-logup {
+        width: 100% !important;
+        top: 50% !important;
+        left: 50% !important;
+        transform: translate(0, 0) !important;
+        position: static;
+      }
+
+      #tesid {
+          width: 100% !important;
+          top: 50% !important;
+          left: 50% !important;
+          transform: translate(-46%, -50%) !important;
+          position: absolute;
+      }
+    }
+
+    @media only screen and (min-width: 768px) {
+      #img-logup {
+          display: none;
+      }
+
+      #frm-logup {
+        width: 100% !important;
+        top: 50% !important;
+        left: 50% !important;
+        transform: translate(50%, 0) !important;
+        position: static;
+      }
+
+      #tesid {
+          width: 70% !important;
+          top: 50% !important;
+          left: 50% !important;
+          transform: translate(-96.5%, -50%) !important;
+          position: absolute;
+      }
+    }
+
+    @media only screen and (min-width: 1440px) {
+      #img-logup {
+        width: 50% !important;
+        top: 50% !important;
+        left: 50% !important;
+        transform: translate(0, 0) !important;
+        position: static;
+        display: block;
+      }
+
+      #frm-logup {
+        width: 50% !important;
+        top: 50% !important;
+        left: 50% !important;
+        transform: translate(0, 0) !important;
+        position: static;
+      }
+
+      #tesid {
+        width: 50% !important;
+        top: 50% !important;
+        left: 50% !important;
+        transform: translate(-50%, -50%) !important;
+        position: absolute;
+      }
+    }
+    </style>
   </body>
 </html>
