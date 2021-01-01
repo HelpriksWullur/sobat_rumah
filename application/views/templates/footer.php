@@ -52,3 +52,17 @@
 </footer>
 <!-- Footer -->
 </div>
+<style>
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.topbar-divider{
+  width:0;
+  border-right:1px solid #e3e6f0;
+  height:calc(4.375rem - 2rem);
+  margin:auto 1rem;
+}
+</style>
