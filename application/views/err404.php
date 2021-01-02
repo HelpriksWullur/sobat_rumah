@@ -1,5 +1,5 @@
 <div class="container-fluid">
-  <div class="pl-5 pr-5" style="height: 36em">
+  <div class="pl-5 pr-5 mt-5" style="height: 37em">
     <h1 class="text-danger">Oops!</h1>
     <h3 class="text-danger">Maaf, halaman yang Anda cari tidak ditemukan!</h3><br>
     <h5>Kenapa ini bisa terjadi?</h5>
