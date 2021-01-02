@@ -41,12 +41,28 @@ defined('BASEPATH') or exit('No script access allowed');
             <a class="h5 text-secondary font-weight-bold dropdown-toggle" type="button" id="kategori_dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Kategori</a>
 
             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="kategori_dropdown" style="margin-top: 1rem">
-              <a class="dropdown-item" href="<?= base_url('Tes'); ?>">
-                Furniture Rumah
+              <a class="dropdown-item" href="<?= base_url('Account'); ?>">
+                Semua
               </a>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="<?= base_url('Tes'); ?>">
-                Furniture Kantor
+              <a class="dropdown-item" href="<?= base_url('Account/kategori/kursi'); ?>">
+                Kursi
+              </a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="<?= base_url('Account/kategori/meja'); ?>">
+                Meja
+              </a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="<?= base_url('Account/kategori/lemari'); ?>">
+                Lemari
+              </a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="<?= base_url('Account/kategori/kasur'); ?>">
+                Kasur
+              </a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="<?= base_url('Account/kategori/lampu'); ?>">
+                Lampu
               </a>
             </div>
           </li>
@@ -71,7 +87,7 @@ defined('BASEPATH') or exit('No script access allowed');
                 foreach ($katalog as $k) { ?>
                     <li class="list-group-item">
                       <a class="text-dark" href="" type="button" data-toggle="modal" data-target="#produk<?= $k['id_produk']; ?>">
-                        <img src="<?= base_url('assets/img/produk/'); ?><?= $k['gambar']; ?>" alt="" style="width:3rem; height:3rem">
+                        <img src="<?= $k['gambar']; ?>" alt="" style="width:3rem; height:3rem">
                         <span><?= $k['nama_produk']; ?></span>
                       </a>
                     </li>

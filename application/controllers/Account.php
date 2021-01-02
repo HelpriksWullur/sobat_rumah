@@ -40,4 +40,17 @@ class Account extends CI_Controller
     // $this->session->set_flashdata('notifikasi', '<div class="alert alert-success alert-message" role="alert">Pembelian Anda berhasil!!</div>');
     redirect('Account');
   }
+
+  public function kategori($nama)
+  {
+    $data=[
+      'judul' => $this->session->judul,
+      'user' => $this->session->user,
+      'katalog' => $this->ModelProduk->getKatalogBy($nama)->result_array()
+    ];
+
+    $this->load->view('templates/header', $data);
+    $this->load->view('dashboard/index', $data);
+    $this->load->view('templates/footer', $data);
+  }
 }
