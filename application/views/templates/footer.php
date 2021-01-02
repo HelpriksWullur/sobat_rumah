@@ -59,10 +59,27 @@ html, body {
   height: 100%;
 }
 
+#header a {
+  text-decoration: none;
+}
+
 .topbar-divider{
   width:0;
   border-right:1px solid #e3e6f0;
   height:calc(4.375rem - 2rem);
   margin:auto 1rem;
+}
+
+.btn-primary {
+  border-color: rgb(130, 64, 3) !important;
+  background-color: rgb(130, 64, 3) !important;
+}
+
+.btn-primary:hover {
+  background-color: rgb(241, 116, 0) !important;
+}
+
+.btn-primary:focus {
+  box-shadow:0 0 0 .2rem rgba(241, 116, 0, 0.5) !important;
 }
 </style>
