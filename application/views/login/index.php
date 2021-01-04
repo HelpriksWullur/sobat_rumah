@@ -12,7 +12,7 @@ defined('BASEPATH') or exit('No script access allowed');
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"></script>
 
   </head>
-  <body style="background-color: rgb(164, 160, 160)">
+  <body style="background-image: url('https://images.unsplash.com/photo-1585670149967-b4f4da88cc9f?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80'); background-size: 100% 100%;">
     <div class="container-fluid">
       <div id="tesid" class="container-fluid frm-login-signup row">
         <div id="img-logup" class="w-50 rounded-left">
