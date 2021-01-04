@@ -56,7 +56,7 @@
             <h4><b><?= money_format("%i",$k['harga_produk']); ?></b></h4>
             <div class="row d-flex align-items-center w-100 justify-content-center">
               <p class="h6 mr-3">Jumlah Beli</p>
-              <input id="inpt_jmlh_<?= $k['id_produk']; ?>" class="inpt_jmlh form-control w-25" type="number" name="jumlah_beli" min="1" max="10" value="1">
+              <input id="<?= $k['id_produk']; ?>" class="inpt_jmlh form-control w-25" type="number" name="jumlah_beli" min="1" max="10" value="1" onchange="totalBayar(this.id)">
             </div>
             <div class="p-3 mb-3">
               <hr>
@@ -93,3 +93,8 @@
 </div>
 
 <!-- akhir konten -->
+<script>
+  function totalBayar(id){
+    document.getElementById('total_byr_' + id).value = document.getElementById('hrg_produk_' + id).value * document.getElementById(id).value;
+  }
+</script>
