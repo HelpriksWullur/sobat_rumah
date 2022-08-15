@@ -1,7 +1,7 @@
 # Project Web Programming 2 Tim 2 RPL 10.3A.25
 
-* Nama Website : Sobat Rumah
-* Jenis Website : ecommerce furniture
+Nama Website : Sobat Rumah <br>
+Jenis Website : ecommerce furniture
 
 ## Kelompok 2 Web Programming 2
 1. Helpriks Wullur (10190001) - wullurhelpriks@gmail.com
